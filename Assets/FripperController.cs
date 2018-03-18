@@ -46,11 +46,11 @@ public class FripperController : MonoBehaviour {
 			if(touch.phase == TouchPhase.Began)
 			{
 				// タッチ開始
-				if (touch.position.x >= 240 && tag == "RightFripperTag")
+				if (touch.position.x >= (Screen.width * 0.5) && tag == "RightFripperTag")
 				{
 					SetAngle (this.flickAngle);
 				}
-				if (touch.position.x < 240  && tag == "LeftFripperTag")
+				if (touch.position.x < (Screen.width * 0.5)  && tag == "LeftFripperTag")
 				{
 					SetAngle (this.flickAngle);
 				}
@@ -58,11 +58,11 @@ public class FripperController : MonoBehaviour {
 			else if (touch.phase == TouchPhase.Ended)
 			{
 				// タッチ終了
-				if (touch.position.x >= 240  && tag == "RightFripperTag")
+				if (touch.position.x >= (Screen.width * 0.5)  && tag == "RightFripperTag")
 				{
 					SetAngle (this.defaultAngle);
 				}
-				if (touch.position.x < 240  && tag == "LeftFripperTag")
+				if (touch.position.x < (Screen.width * 0.5)  && tag == "LeftFripperTag")
 				{
 					SetAngle (this.defaultAngle);
 				}
@@ -72,22 +72,22 @@ public class FripperController : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) 
 		{
 			// タッチ開始
-			if (Input.mousePosition.x >= 240 && tag == "RightFripperTag")
+			if (Input.mousePosition.x >= (Screen.width * 0.5) && tag == "RightFripperTag")
 			{
 				SetAngle (this.flickAngle);
 			}
-			if (Input.mousePosition.x < 240 && tag == "LeftFripperTag")
+			if (Input.mousePosition.x < (Screen.width * 0.5) && tag == "LeftFripperTag")
 			{
 				SetAngle (this.flickAngle);
 			}
 		}
 		if (Input.GetMouseButtonUp (0))
 		{
-			if (Input.mousePosition.x >= 240 && tag == "RightFripperTag")
+			if (Input.mousePosition.x >= (Screen.width * 0.5) && tag == "RightFripperTag")
 			{
 				SetAngle (this.defaultAngle);
 			}
-			if (Input.mousePosition.x < 240 && tag == "LeftFripperTag")
+			if (Input.mousePosition.x < (Screen.width * 0.5) && tag == "LeftFripperTag")
 			{
 				SetAngle (this.defaultAngle);
 			}
